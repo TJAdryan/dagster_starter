@@ -1,0 +1,13 @@
+# In file: ~/Documents/Code_projects/my_speed_camera_project/pyproject.toml
+
+[project]
+name = "my_speed_camera_project"
+version = "0.1.0"
+
+[tool.setuptools.packages.find]
+where = ["src"] # Tell setuptools to look for packages in the 'src' directory
+
+[tool.dagster]
+# This remains the same, as the logical module path hasn't changed,
+# only its physical location on disk.
+module_name = "my_speed_camera_project.definitions"

@@ -1,0 +1,41 @@
+# Virtual Environment
+.venv/
+venv/
+env/
+
+# Python artifacts
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+build/
+dist/
+
+# Dagster local storage and temporary files
+.dagster_home/                  # Your persistent DAGSTER_HOME
+dagster.yaml                    # Dagster's local config
+sqlite.db                       # Old Dagster event log db if used
+dagster.db                      # New Dagster event log db if used
+.tmp_dagster_home_* # CRITICAL: Ignores temporary Dagster home directories
+.dagster/                       # Old default for local Dagster files
+logs/                           # If you have a logs directory for Dagster output
+
+# Generated data (raw intermediate files)
+data/raw_daily_violations/      # <-- THIS LINE IS CRITICAL: IGNORES RAW DAILY PARQUET FILES
+data/aggregated_financial_data/*.parquet # <--- NEW: Ignores specific parquet files within aggregated data if they become too large (e.g. if you decide not to commit daily/weekly summary, or if they grow too big)
+
+# Environment variables (CRITICAL for security)
+.env
+
+# IDE specific files
+.vscode/
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+
+# Other common temporary/local files
+.ipynb_checkpoints/
+.pytest_cache/
+.coverage
+htmlcov/

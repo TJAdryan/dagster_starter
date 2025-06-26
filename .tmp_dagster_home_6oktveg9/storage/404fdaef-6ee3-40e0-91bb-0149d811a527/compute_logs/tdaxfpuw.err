@@ -1,0 +1,17 @@
+[32m2025-06-25 12:43:32 -0400[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 404fdaef-6ee3-40e0-91bb-0149d811a527 - 3813675 - LOGS_CAPTURED - Started capturing logs in process (pid: 3813675).
+[32m2025-06-25 12:43:32 -0400[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 404fdaef-6ee3-40e0-91bb-0149d811a527 - 3813675 - top_violation_types_by_count - STEP_START - Started execution of step "top_violation_types_by_count".
+[32m2025-06-25 12:43:32 -0400[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 404fdaef-6ee3-40e0-91bb-0149d811a527 - top_violation_types_by_count - Loading file from: /home/dominickryan/Documents/Code_projects/my_speed_camera_project/.tmp_dagster_home_6oktveg9/storage/cleaned_financial_data using PickledObjectFilesystemIOManager...
+[32m2025-06-25 12:43:32 -0400[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 404fdaef-6ee3-40e0-91bb-0149d811a527 - 3813675 - top_violation_types_by_count - LOADED_INPUT - Loaded input "cleaned_financial_data" using input manager "io_manager", from output "result" of step "cleaned_financial_data"
+[32m2025-06-25 12:43:32 -0400[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 404fdaef-6ee3-40e0-91bb-0149d811a527 - 3813675 - top_violation_types_by_count - STEP_INPUT - Got input "cleaned_financial_data" of type "DataFrame". (Type check passed).
+/home/dominickryan/Documents/Code_projects/my_speed_camera_project/src/my_speed_camera_project/data_visualization.py:75: FutureWarning: 
+
+Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `y` variable to `hue` and set `legend=False` for the same effect.
+
+  sns.barplot(x='violation_count', y='violation', data=top_n, palette='viridis')
+[32m2025-06-25 12:43:33 -0400[0m - dagster - [34mINFO[0m - __ASSET_JOB - 404fdaef-6ee3-40e0-91bb-0149d811a527 - top_violation_types_by_count - Top violation types by count chart saved to results/top_violation_types_by_count.png
+[32m2025-06-25 12:43:33 -0400[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 404fdaef-6ee3-40e0-91bb-0149d811a527 - 3813675 - top_violation_types_by_count - ASSET_MATERIALIZATION - Top 10 violation types by count chart generated.
+[32m2025-06-25 12:43:33 -0400[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 404fdaef-6ee3-40e0-91bb-0149d811a527 - 3813675 - top_violation_types_by_count - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
+[32m2025-06-25 12:43:33 -0400[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 404fdaef-6ee3-40e0-91bb-0149d811a527 - top_violation_types_by_count - Writing file at: /home/dominickryan/Documents/Code_projects/my_speed_camera_project/.tmp_dagster_home_6oktveg9/storage/top_violation_types_by_count using PickledObjectFilesystemIOManager...
+[32m2025-06-25 12:43:33 -0400[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 404fdaef-6ee3-40e0-91bb-0149d811a527 - 3813675 - top_violation_types_by_count - ASSET_MATERIALIZATION - Materialized value top_violation_types_by_count.
+[32m2025-06-25 12:43:33 -0400[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 404fdaef-6ee3-40e0-91bb-0149d811a527 - 3813675 - top_violation_types_by_count - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+[32m2025-06-25 12:43:33 -0400[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 404fdaef-6ee3-40e0-91bb-0149d811a527 - 3813675 - top_violation_types_by_count - STEP_SUCCESS - Finished execution of step "top_violation_types_by_count" in 390ms.
