@@ -20,6 +20,10 @@ dagster.db                      # New Dagster event log db if used
 .tmp_dagster_home_* # CRITICAL: Ignores temporary Dagster home directories
 .dagster/                       # Old default for local Dagster files
 logs/                           # If you have a logs directory for Dagster output
+.env
+data/raw_daily_violations/
+.tmp_dagster_home_*
+.dagster_home/
 
 # Generated data (raw intermediate files)
 data/raw_daily_violations/      # <-- THIS LINE IS CRITICAL: IGNORES RAW DAILY PARQUET FILES
