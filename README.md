@@ -58,7 +58,7 @@ graph TD
     F & G --> I[Streamlit Dashboard <br> (Reads Parquet Files)];
 
 🚀 Getting Started Locally
-Follow these steps to set up and run the project on your local machine.
+Please follow these steps to set up and run the project on your local machine.
 
 Prerequisites
 Python 3.8+
