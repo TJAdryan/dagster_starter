@@ -64,7 +64,6 @@ Prerequisites
 Python 3.8+
 
 pip (Python package installer)
-
 1. Clone the Repository
 git clone https://github.com/TJAdryan/dagster_starter_nyc.git
 cd dagster_starter_nyc
@@ -84,28 +83,36 @@ pip install streamlit plotly-express pyarrow # Explicitly install Streamlit and 
 4. Configure DAGSTER_HOME (For Persistent Storage)
 This tells Dagster where to store its internal run history and the DuckDB database.
 
-## In your terminal, run this once:
+In your terminal, run this once:
+
 export DAGSTER_HOME=$(pwd)/.dagster_home
 
-## To make it permanent (recommended), add the line above to your ~/.bashrc or ~/.zshrc file
-## Then run `source ~/.bashrc`
+To make it permanent (recommended), add the line above to your ~/.bashrc or ~/.zshrc file:
+
+export DAGSTER_HOME=/path/to/your/project/.dagster_home
+# Example for your project: export DAGSTER_HOME=/home/dominickryan/Documents/Code_projects/my_speed_camera_project/.dagster_home
+
+Then run source ~/.bashrc (or source ~/.zshrc) in your terminal to apply the change.
 
 5. Set up Environment Variables (.env)
 Create a file named .env in the root directory of your project (same level as pyproject.toml). This file will store your API key securely.
 
-## .env file content:
+.env file content:
+```
 NYC_OPEN_DATA_API_KEY=YOUR_NYC_OPEN_DATA_API_KEY_HERE
-
+```
 Replace YOUR_NYC_OPEN_DATA_API_KEY_HERE with your actual NYC Open Data API Key. You can obtain one by registering on the NYC Open Data portal.
 
 DO NOT COMMIT YOUR .env FILE TO GIT! It's already in .gitignore.
+
 
 6. Run the Dagster Pipeline (To Generate Data)
 This is the most critical step. You need to run the Dagster pipeline multiple times to populate your data/raw_daily_violations/ folder with enough daily Parquet files for your desired 61-31 day analysis window.
 
 Start the Dagster UI (Dagit):
-
+```
 dagster dev
+```
 
 This will open Dagit in your browser (usually http://localhost:3000).
 
