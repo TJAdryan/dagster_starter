@@ -90,7 +90,7 @@ export DAGSTER_HOME=$(pwd)/.dagster_home
 To make it permanent (recommended), add the line above to your ~/.bashrc or ~/.zshrc file:
 
 export DAGSTER_HOME=/path/to/your/project/.dagster_home
-# Example for your project: export DAGSTER_HOME=/home/dominickryan/Documents/Code_projects/my_speed_camera_project/.dagster_home
+# Example for your project: export DAGSTER_HOME=/home/myuser/Code_projects/my_speed_camera_project/.dagster_home
 
 Then run source ~/.bashrc (or source ~/.zshrc) in your terminal to apply the change.
 
