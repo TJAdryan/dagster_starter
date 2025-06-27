@@ -83,16 +83,19 @@ pip install streamlit plotly-express pyarrow # Explicitly install Streamlit and 
 4. Configure DAGSTER_HOME (For Persistent Storage)
 This tells Dagster where to store its internal run history and the DuckDB database.
 
-In your terminal, run this once:
-
+In your terminal, run this once (for the current session):
+```
 export DAGSTER_HOME=$(pwd)/.dagster_home
 
-To make it permanent (recommended), add the line above to your ~/.bashrc or ~/.zshrc file:
-
+```
+To make it permanent (recommended), add the following line to your ~/.bashrc or ~/.zshrc file, replacing /path/to/your/project with your actual project directory's full path:
+```
 export DAGSTER_HOME=/path/to/your/project/.dagster_home
-# Example for your project: export DAGSTER_HOME=/home/myuser/Code_projects/my_speed_camera_project/.dagster_home
+```
 
 Then run source ~/.bashrc (or source ~/.zshrc) in your terminal to apply the change.
+
+
 
 5. Set up Environment Variables (.env)
 Create a file named .env in the root directory of your project (same level as pyproject.toml). This file will store your API key securely.
